@@ -1,23 +1,23 @@
 window.addEventListener('devicemotion', function(event) {
-    const x = event.accelerationIncludingGravity.x;
-    const y = event.accelerationIncludingGravity.y;
-    const z = event.accelerationIncludingGravity.z;
+    var x = event.accelerationIncludingGravity.x;
+    var y = event.accelerationIncludingGravity.y;
+    var z = event.accelerationIncludingGravity.z;
 
-    const resultAcc = document.getElementById('result_acc')
+    var resultAcc = document.getElementById('result_acc')
     resultAcc.innerHTML = '重力加速度<br />' +
-        'X: ' + x.toFixed(2) + '(m/s^2)<br />' +
-        'Y: ' + y.toFixed(2) + '(m/s^2)<br />' +
-        'Z: ' + z.toFixed(2) + '(m/s^2)<br />'
-}, false)
+        'X: ' + x + '(m/s^2)<br />' +
+        'Y: ' + y + '(m/s^2)<br />' +
+        'Z: ' + z + '(m/s^2)<br />'
+}, true)
 
 window.addEventListener('deviceorientation', function (event) {
-    const alpha = event.alpha;
-    const beta = event.beta;
-    const gamma = event.gamma;
+    var alpha = event.alpha;
+    var beta = event.beta;
+    var gamma = event.gamma;
 
-    const resultGyro = document.getElementById('result_gyro')
+    var resultGyro = document.getElementById('result_gyro')
     resultGyro.innerHTML = 'ジャイロセンサ<br />' +
-        'alpha: ' + alpha.toFixed(2) + '°<br />' +
-        'beta: ' + beta.toFixed(2) + '°<br />' +
-        'gamma: ' + gamma.toFixed(2) + '°<br />'
-}, false)
+        'alpha: ' + alpha + '°<br />' +
+        'beta: ' + beta + '°<br />' +
+        'gamma: ' + gamma + '°<br />'
+}, true)
